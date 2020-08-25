@@ -3,10 +3,15 @@
 
 const read = require("readline-sync")
 
-let temperaturaC = parseFloat(read.question("Digite a temperatura em Celsius: "))
 
-function temperaturaFahrenheit(temperatura) {
-    return ((9 * temperatura) / 5 + 32)
+
+function temperaturaCelsius() {
+    return parseFloat(read.question("Digite a temperatura em Celsius: "))
 }
 
-console.log(`${temperaturaFahrenheit(temperaturaC)} °F `)
+function temperaturaFahrenheit() {
+    let temperaturaEmCelsius = temperaturaCelsius()
+    return ((9 * temperaturaEmCelsius) / 5 + 32)
+}
+
+console.log(`${temperaturaFahrenheit()} °F `)
